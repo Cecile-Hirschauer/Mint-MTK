@@ -1,3 +1,5 @@
+import CustomProvider from "./CustomProvider";
+
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -29,7 +31,9 @@ export default function RootLayout({
         fontSans.variable
       )}
     >
+      <CustomProvider>
       {children}
+      </CustomProvider>
     </body>
   </html>
   );
